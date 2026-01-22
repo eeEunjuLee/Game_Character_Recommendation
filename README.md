@@ -36,3 +36,26 @@ between character classes.
 This project is designed as a **domain-driven Toy Modeling study**, 
 emphasizing problem re-formulation, structural modeling, and interpretability 
 over large-scale performance optimization.
+
+---
+## Graph Construction Criteria
+
+The similarity between characters is defined by the following rules:
+* **Same hometown but different kind**
+  * Players explore a familiar region but experience a new storyline.
+* **Same kind but different hometown**
+  * Players stay within the same faction but start in a new environment.
+* **Same job field**
+  * The recommended class preserves the player’s preferred combat style.
+* **Main-stat equals other’s sub-stat**
+  * The recommended class complements the player’s past preferences with subtle variation.   
+
+Each character is modeled as a node, and an edge is added when a similarity condition is met. We
+assign edge weights based on how strong the similarity is, allowing GNNs to learn meaningful
+character relationships.
+
+
+
+<img width="988" height="709" alt="image" src="https://github.com/user-attachments/assets/affe684a-9be2-4d48-9edc-60a23d895ed6" />
+
+
